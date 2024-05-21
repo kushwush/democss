@@ -1,0 +1,71 @@
+<mvc:View
+    controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <VBox id="silosContainer">
+                <items>
+                    <HBox
+                        id="idSilosHBox"
+                        items="{siloModel>/silos}"
+                    >
+                        <VBox>
+                            <Panel
+                                height="300px"
+                                width="100px"
+                                class="siloPanel"
+                            >
+                                <content>
+                                    <VBox
+                                    height="{path: 'siloModel>height', formatter: '.formatHeight'}"
+                                    class="fill"
+                                    alignContent="Center"
+                                    alignItems="Center"
+                                    >
+                                </VBox>
+                                <FlexBox height="100%">
+                                    <items>
+                                        <!-- Label = "Height" Text = "{siloModel>height}"-->
+                                        <!-- Label = "Material Name" Text = "{siloModel>materialName}" -->
+                                        <!-- <Label
+                                            design="Bold"
+                                            textAlign="Center"
+                                            text="{siloModel>height}"
+                                        /> -->
+                                        <VBox alignItems="Center" justifyContent="SpaceAround">
+                                            <Label
+                                                design="Bold"
+                                                textAlign="Center"
+                                                text="{i18n>View1View.Height}"
+                                            />
+                                            <Text
+                                                textAlign="Center"
+                                                text="{siloModel>height}"
+                                            />
+                                            <Label
+                                                design="Bold"
+                                                textAlign="Center"
+                                                text="{i18n>View1View.Material}"
+                                            />
+                                            <Text
+                                                textAlign="Center"
+                                                text="{siloModel>materialName}"
+                                            />
+                                        </VBox>
+                                    </items>
+                                </FlexBox>
+                                </content>
+                            </Panel>
+                        </VBox>
+                    </HBox>
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

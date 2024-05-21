@@ -1,0 +1,65 @@
+/* General Styles for the Silo Containers */
+.siloPanel {
+  background-color: grey; /* Default silo color */
+  border-radius: 10px;
+  border: 2px solid black;
+  position: relative;
+  overflow: hidden;
+  margin: 10px; /* Add some space between silos */
+}
+
+.fill {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transition: height 1s cubic-bezier(.7,-0.01,.31,1); /* Animation on load */
+  box-shadow: inset 0px -10px 10px -5px rgba(0,0,0,0.3); /* Inner shadow for depth effect */
+}
+
+/* Specific colors for different materials */
+.CRUDE_OIL .fill {
+  background: linear-gradient(to top, #0000ff, #00ffff);
+}
+
+.NATURAL_GAS .fill {
+  background: linear-gradient(to top, #ff0000, #ffff00);
+}
+
+.PETROLEUM .fill {
+  background: linear-gradient(to top, #00ff00, #00ff99);
+}
+
+.DIESEL .fill {
+  background: linear-gradient(to top, #ff00ff, #9900ff);
+}
+
+.GASOLINE .fill {
+  background: linear-gradient(to top, #ff9900, #ffcc00);
+}
+
+.JET_FUEL .fill {
+  background: linear-gradient(to top, #00ffff, #00ccff);
+}
+
+.KEROSENE .fill {
+  background: linear-gradient(to top, #cc00ff, #ff00cc);
+}
+
+.material-8 .fill {
+  background: linear-gradient(to top, #00ffcc, #00ff66);
+}
+
+.material-9 .fill {
+  background: linear-gradient(to top, #ffcc00, #ff9900);
+}
+
+.material-10 .fill {
+  background: linear-gradient(to top, #ccff00, #99ff00);
+}
+
+.sapMHBox { 
+  justify-content: space-around;
+  align-items: center; 
+  width: 100%; 
+}
